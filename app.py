@@ -6,7 +6,7 @@ import numpy as np
 # Function to handle input and preprocessing
 def process_data(file_path):
     # Read the data
-data = pd.read_csv(file_path, delimiter=',')
+    data = pd.read_csv(file_path, delimiter=',')
     # Coerce the revenue and wRVU columns
     if 'revenue' in data.columns:
         data['revenue'] = data['revenue'].replace({'\$': '', ',': ''}, regex=True).astype(float)
